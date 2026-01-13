@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kakung Family | Family Gathering 2026</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f1f5f9;
+  color:#1f2937;
+}
+a{color:#0d9488;text-decoration:none;font-weight:bold}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:340px;
+  background:url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80") center/cover no-repeat;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.9)
+  );
+}
+.hero-content{
+  position:absolute;
+  inset:0;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  color:white;
+}
+.hero h1{
+  font-size:40px;
+  margin:0;
+  text-shadow:0 4px 16px rgba(0,0,0,1);
+}
+.hero p{
+  margin:8px 0 16px;
+  font-size:15px;
+  color:#e5e7eb;
+  text-shadow:0 3px 10px rgba(0,0,0,.9);
+}
+
+/* COUNTDOWN */
+.countdown{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.cd-box{
+  background:rgba(0,0,0,.45);
+  padding:10px 14px;
+  border-radius:14px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,.15);
+  min-width:64px;
+}
+.cd-box b{
+  font-size:22px;
+  display:block;
+}
+
+/* CONTENT */
+.container{
+  max-width:440px;
+  margin:auto;
+  padding:16px;
+}
+.card{
+  background:white;
+  border-radius:20px;
+  padding:16px;
+  margin-bottom:16px;
+  box-shadow:0 10px 22px rgba(0,0,0,.08);
+}
+
+/* TABS */
+.tabs{
+  display:flex;
+  gap:6px;
+  margin-bottom:16px;
+}
+.tabs button{
+  flex:1;
+  border:none;
+  padding:10px;
+  border-radius:999px;
+  font-weight:bold;
+  cursor:pointer;
+  background:#e5e7eb;
+}
+.tabs button.active{
+  background:#0d9488;
+  color:white;
+}
+
+/* RUNDOWN */
+.section-title{
+  font-weight:bold;
+  margin:16px 0 8px;
+  color:#0f766e;
+}
+.item{
+  position:relative;
+  padding-left:34px;
+  margin-bottom:20px;
+}
+.item::before{
+  content:"";
+  position:absolute;
+  left:15px;
+  top:0;
+  bottom:-20px;
+  width:3px;
+  background:#e5e7eb;
+}
+.item:last-child::before{display:none}
+.dot{
+  position:absolute;
+  left:5px;
+  top:3px;
+  width:22px;
+  height:22px;
+  background:#0d9488;
+  border-radius:50%;
+}
+.time{
+  font-weight:bold;
+  color:#f97316;
+  font-size:14px;
+}
+.item-details{
+  margin-top:6px;
+  padding-left:16px;
+}
+.item-details li{
+  font-size:13px;
+  color:#4b5563;
+  margin-bottom:4px;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+.gallery img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:16px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:12px;
+  color:#6b7280;
+  margin:30px 0 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>🏡 Kakung Family</h1>
+    <p>Family Gathering • 19–20 Januari 2026</p>
+
+    <div class="countdown">
+      <div class="cd-box"><b id="d">0</b>Hari</div>
+      <div class="cd-box"><b id="h">0</b>Jam</div>
+      <div class="cd-box"><b id="m">0</b>Menit</div>
+      <div class="cd-box"><b id="s">0</b>Detik</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- LOKASI -->
+<div class="card">
+  <b>📍 Villa Royal Family 3</b>
+  <p>Kopo, Kec. Cisarua, Kab. Bogor, Jawa Barat</p>
+  <a href="https://share.google/unMaB5yVvfxaRphT1" target="_blank">
+    🗺️ Buka Google Maps
+  </a>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="active" onclick="showTab('day1',this)">Senin 19</button>
+  <button onclick="showTab('day2',this)">Selasa 20</button>
+  <button onclick="showTab('info',this)">Info</button>
+</div>
+
+<!-- DAY 1 -->
+<div id="day1" class="card tab">
+  <div class="section-title">Pagi – Siang</div>
+
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">09.00 – 09.30</div>
+    <p>Bangun & persiapan awal</p>
+    <ul class="item-details">
+      <li>Persiapan masing-masing keluarga</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">09.30 – 10.30</div>
+    <p>Cek perlengkapan</p>
+    <ul class="item-details">
+      <li>Pakaian & obat pribadi</li>
+      <li>Perlengkapan anak</li>
+      <li>Siapkan logistik</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">10.30 – 11.30</div>
+    <p>Makan siang 🍽️</p>
+    <ul class="item-details">
+      <li>Di rumah / restoran</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">12.00 – 14.00</div>
+    <p>Perjalanan menuju villa</p>
+    <ul class="item-details">
+      <li>Lewat jalur Parung</li>
+      <li>Gunakan Google Maps / Waze</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Sore</div>
+
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">14.00 – 14.30</div>
+    <p>Check-in & pembagian kamar</p>
+  </div>
+
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">15.30 – 17.00</div>
+    <p>Main kolam & santai 💦</p>
+  </div>
+
+  <div class="section-title">Malam</div>
+
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">18.30 – 20.00</div>
+    <p>BBQ & makan malam 🔥</p>
+  </div>
+</div>
+
+<!-- DAY 2 -->
+<div id="day2" class="card tab" style="display:none">
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">06.00 – 06.30</div>
+    <p>Foto pagi 📸</p>
+  </div>
+
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">06.30 – 07.15</div>
+    <p>Senam pagi 💪</p>
+  </div>
+
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">07.15 – 08.30</div>
+    <p>Sarapan bersama</p>
+  </div>
+
+  <div class="item">
+    <div class="dot"></div>
+    <div class="time">12.00</div>
+    <p>Check-out villa</p>
+  </div>
+</div>
+
+<!-- INFO -->
+<div id="info" class="card tab" style="display:none">
+  <p>🍳 Alat masak villa <b>SUDAH TERSEDIA</b></p>
+  <p>🛒 Jangan lupa beli bahan masak & BBQ</p>
+  <p>🧥 Bawa jaket (udara Cisarua dingin)</p>
+</div>
+
+<!-- GALLERY -->
+<div class="card">
+  <b>📸 Suasana Villa</b>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&q=80">
+  </div>
+</div>
+
+<footer>
+Dibuat dengan ❤️ untuk Kakung Family 2026
+</footer>
+
+</div>
+
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.tab').forEach(t=>t.style.display='none');
+  document.getElementById(id).style.display='block';
+  document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+const target = new Date("2026-01-19T14:00:00+07:00").getTime();
+
+setInterval(()=>{
+  const now = new Date().getTime();
+  const diff = target - now;
+  if(diff < 0) return;
+
+  document.getElementById("d").innerText =
+    Math.floor(diff/(1000*60*60*24));
+  document.getElementById("h").innerText =
+    Math.floor((diff/(1000*60*60))%24);
+  document.getElementById("m").innerText =
+    Math.floor((diff/(1000*60))%60);
+  document.getElementById("s").innerText =
+    Math.floor((diff/1000)%60);
+},1000);
+</script>
+
+</body>
+</html>
